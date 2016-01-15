@@ -13,6 +13,11 @@ public class MainPresenter implements MainContract.Presenter {
 
     @Override
     public void startMotivationIfPossible() {
-
+        if (mView.isWorkoutDurationSet()) {
+            int workoutDuration = mView.getWorkoutDuration();
+            mView.showMotivationActivity(workoutDuration);
+        } else {
+            mView.showErrorSnackbar();
+        }
     }
 }

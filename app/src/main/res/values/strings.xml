@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Moovin5</string>
+
+
+
+    <string name="main_error_snackbar">There was an error!</string>
 </resources>

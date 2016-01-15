@@ -57,6 +57,6 @@ public class MainPresenterTest {
 
         // Test
         verify(mView).isWorkoutDurationSet();
-        verify(mView).showErrorSnackbar(anyString());
+        verify(mView).showErrorSnackbar();
     }
 }

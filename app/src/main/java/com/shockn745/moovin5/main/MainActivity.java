@@ -36,7 +36,11 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     @Override
     public void showMotivationActivity(int workoutDuration) {
         // todo implement
-        showErrorSnackbar("Not implemented : " + workoutDuration);
+        Snackbar.make(
+                mEditText,
+                "Not implemented : " + workoutDuration,
+                Snackbar.LENGTH_SHORT
+        ).show();
     }
 
     @Override
@@ -50,8 +54,12 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     }
 
     @Override
-    public void showErrorSnackbar(String message) {
-        Snackbar.make(mEditText, message, Snackbar.LENGTH_SHORT).show();
+    public void showErrorSnackbar() {
+        Snackbar.make(
+                mEditText,
+                getString(R.string.main_error_snackbar),
+                Snackbar.LENGTH_SHORT
+        ).show();
     }
 
     /**

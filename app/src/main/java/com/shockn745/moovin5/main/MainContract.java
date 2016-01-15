@@ -29,9 +29,9 @@ public interface MainContract {
 
         /**
          * Show an error Snackbar.
-         * @param message Error message to display
          */
-        void showErrorSnackbar(String message);
+        void showErrorSnackbar();
+
     }
 
     interface Presenter {
