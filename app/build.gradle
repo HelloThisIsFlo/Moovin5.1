@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.shockn745.moovin5"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -51,6 +51,7 @@ dependencies {
     testCompile "org.hamcrest:hamcrest-all:1.3"
 
     // UI testing
+    compile "com.android.support.test.espresso:espresso-idling-resource:2.2.1"
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
     androidTestCompile "com.android.support.test:runner:0.4.1"
     androidTestCompile "com.android.support.test:rules:0.4.1"

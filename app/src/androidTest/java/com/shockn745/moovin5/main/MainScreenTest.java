@@ -28,6 +28,8 @@ import static org.hamcrest.core.AllOf.allOf;
 @LargeTest
 public class MainScreenTest {
 
+    private final static String WRONG_DURATION = "hello";
+    private final static String RIGHT_DURATION = "40";
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityRule =
@@ -40,14 +42,20 @@ public class MainScreenTest {
 
     @Test
     public void enterDuration_success() {
-        // TODO Implement
+        // Type text and then press the button.
+        onView(withId(R.id.main_edit_text))
+                .perform(typeText(RIGHT_DURATION), closeSoftKeyboard());
+        onView(withId(R.id.main_button)).perform(click());
+
+        // Check that Motivation Activity is displayed
+        onView(withId(R.id.motivation_toolbar)).check(matches(isDisplayed()));
     }
 
     @Test
     public void enterDuration_parse_error() {
         // Type text and then press the button.
         onView(withId(R.id.main_edit_text))
-                .perform(typeText("sdfsadf"), closeSoftKeyboard());
+                .perform(typeText(WRONG_DURATION), closeSoftKeyboard());
         onView(withId(R.id.main_button)).perform(click());
 
         // Check that the text was changed.
