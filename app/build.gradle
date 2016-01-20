@@ -42,6 +42,9 @@ dependencies {
     // Google libraries
     compile 'com.google.guava:guava:19.0'
 
+    // Google play services
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
+
     // Network operations
     compile 'com.mcxiaoke.volley:library:1.0.19'
 

@@ -14,6 +14,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * MVP View for the Main screen
+ */
 public class MainActivity extends AppCompatActivity implements MainContract.View {
 
     @Bind(R.id.main_edit_text)
