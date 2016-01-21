@@ -12,17 +12,26 @@ import com.google.android.gms.maps.model.LatLng;
  */
 public class AndroidModelImpl implements AndroidModel {
 
-    private Context mContext;
+    private final SharedPreferences mSharedPreferences;
 
     public AndroidModelImpl(Context context) {
-        this.mContext = context;
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+    }
+
+    @Override
+    public void setGymLocationInPreferences() {
+
+    }
+
+    @Override
+    public boolean isGymLocationSetInPreferences() {
+        return false;
     }
 
     @Nullable
     @Override
     public LatLng getGymLocationFromPreferences() {
 
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(mContext);
 
 
 

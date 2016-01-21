@@ -9,6 +9,17 @@ import com.google.android.gms.maps.model.LatLng;
  */
 public class MockAndroidModelImpl implements AndroidModel {
 
+
+    @Override
+    public void setGymLocationInPreferences() {
+
+    }
+
+    @Override
+    public boolean isGymLocationSetInPreferences() {
+        return false;
+    }
+
     @Nullable
     @Override
     public LatLng getGymLocationFromPreferences() {
